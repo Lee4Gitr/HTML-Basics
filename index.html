@@ -1,0 +1,145 @@
+<!--index.html is the most important name you'll need to know as a web developer. Most browsers will automatically use
+index.html as the file to render.-->
+
+<!--Anything within the less than exclamation mark dash dash and dash dash greater than symbols is a comment. These do
+not get rendered to the screen.-->
+
+<!--This information at the top tells the browser that this is supposed to be a webpage and it should render it as
+HTML. It also says to render it using the language code of "en", short for english. -->
+<!DOCTYPE html>
+<html lang="en">
+<!--The "head" element is used to for displaying metadata, or data about the page to the browser. It can describe how
+the page should look if it's linked to on Facebook, Twitter, or what displays in the tab of the browser (Here,
+"lesson 1"). It is also used
+to link CSS and Javascript, but more on that later.-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Lesson 1</title>
+</head>
+<body>
+
+<!-- Welcome! This is HTML! This is also the first lesson of how to become a web developer. I'm going to have to explain
+ a few things first, and you're just going to have to accept them as gospel for the time being. While it may not always
+ be entirely accurate, it will ground you firmly enough to progress. First, double click this file in your folder. It
+ should open in your preferred browser. I'm using Chrome. If you notice anything off, try it in Chrome first. Sometimes
+ browsers can be fussy.-->
+
+<!-- HTML stands for (H)yper(t)ext (M)arkup (L)anguage. Hypertext is just a way of saying text you
+receive over the internet. It's an old term, but it stuck. Markup just means it is structurally significant for a
+website and you can style it and add functionality. Language means it's well documented and is expected to act a
+particular way. If we use a house as a metaphor for web development, HTML is the wood, nails, glue, and concrete that
+hold the house together.-->
+
+<!-- Anything you see between the "<" and ">" can be called a tag or element. Within the tag, you will see a name.
+That name will describe how that tag is or isn't displayed on the browser. Some tags also have closing tags, which is
+just the name repeated, but it ends with a slash. For instance "<div>" is the opening tag, and "</div>" is the closing
+tag, where the name of this tag is "div". There can also be attributes on a tag, for instance, below there is a
+"section" tag. It's ending tag is towards the end  of the file. It has an attribute called "class" with a value of
+"section". For now, we aren't going to worry about it, I'm just going to tell you that I'm adding it to make the site
+easier to read.-->
+
+<!--Don't worry about anything between the nav tags, we'll go over it later.-->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+            <img src="imgs/SatiSoftLogoSimple.png" alt="SatiSoftware" height="112" width="28"/>
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="index.html">
+                Home
+            </a>
+
+            <a class="navbar-item" href="Assignment_1.html">
+                Assignment 1
+            </a>
+
+            <a class="navbar-item" href="Assignment_2.html">
+                Assignment 2
+            </a>
+        </div>
+    </div>
+</nav>
+<section class="section">
+    <!--This is the most generic version of wood we will be using, a div (short for "division").-->
+    <div class="container">
+        <!-- This is a "heading" tag. There are a total of six, h1 through h6, each decreasing in size and importance
+         on the page.-->
+        <h1 class="title">Hello World!</h1>
+        <h3 class="subtitle">
+            HTML is awesome!
+        </h3>
+        <div class="block">
+            You can put anything you want into "div"s, and it will render in your browser!
+        </div>
+        <div class="block">
+            <div>
+                <div> You can also nest as many "div"s inside of each other as you want!</div>
+            </div>
+        </div>
+
+        <div class="block">
+            <p class="block">There are many other types of tags as well. Here is an "ol" tag, or Ordered List.</p>
+            <ol class="block">
+                <li>"ol"s must have "li", or list items.</li>
+                <li>They will display items numerically, incrementing after each "li" element.</li>
+                <li>This should be the third item.</li>
+            </ol>
+            <!-- No amount of space between here will affect the space between the elements when they're rendered in
+             the browser-->
+            <p class="block">This is a similar tag, called a unordered list or "ul", except the items aren't numbered.
+                They're usually just dots, but sometimes they aren't anything, just a new line!</p>
+            <ul class="block">
+                <li>Just a new line</li>
+                <li>new line number 2...</li>
+                <li>and dot number 3!</li>
+            </ul>
+            <p class="block">
+                Here is a "p" tag, or paragraph tag. While it will render very similarly, it's important to understand
+                their differences. One very important rule is: You cannot nest a div inside of a "p" tag.
+            </p>
+            <p class="block">
+                A nice element to use to break between import paragraphs is a horizontal rule, or "hr" element. It adds
+                some nice spacing between other elements.
+            </p>
+        </div>
+
+        <hr/>
+
+        <div class="block">
+            <h2>Block vs. Inline</h2>
+            <p class="block">Now the important part... These have all been block level elements. This means they take
+                up room on a web page. There are different types of elements that <strong>DON'T</strong> take up space,
+                and that was just one of them. These are called "inline" elements. They include the <b>b or Bold</b>
+                tag, the <i>i or italic</i> tag, the <span> span </span> tag, and the two most important inline tags,
+                the image tag <img src="./imgs/illegally-smol.jpg" alt="Illegally smol. Take him away boys.">,
+                which must have a "src" or source attribute specifying where the image is, and an "alt" text attribute,
+                which will display if the image isn't loaded or if someone is using a screen reader. Alt attributes
+                aren't strictly necessary, but they are a "best practice" when talking about modern websites. They make
+                it easier for people of all abilities to use your site. As you can see, the image tag doesn't create a
+                new area, it just renders along with the other text! <b><i>R-i-d-i-c-u-l-o-u-s</i></b>.
+            </p>
+            <p class="block">
+                The final inline element you need to know is the "a" or anchor tag. This can be used to link to link to
+                other <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a" target="_blank">sites</a>,
+                or used to navigate to another page on your website! As a matter of fact, lets do that!
+
+                <a href="Assignment.html"><b><i>Click me!</i></b></a>
+            </p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
